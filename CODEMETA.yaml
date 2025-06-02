@@ -34,7 +34,7 @@ categories:
   - scientific-software
   # - simulation
   # - tools
-  # - visualization
+  - visualization
 
 themes:
   - Information Technology
@@ -68,11 +68,11 @@ themes:
   #     - Structural engineering
   #     - Sustainable buildings
   #
-  # - Chemistry
-  #     - Analytical chemistry
+  - Chemistry
+      - Analytical chemistry
   #     - Chemical engineering and processing
   #     - Chemical thermodynamics and chemical properties
-  #     - Molecular characterization
+      - Molecular characterization
   #     - Theoretical chemistry and modeling
   #     - Thermochemical properties
   #
@@ -202,18 +202,18 @@ themes:
   #     - Systems integration
   #     - Technology commercialization
   #
-  # - Materials
+  - Materials
   #     - Ceramics
   #     - Composites
   #     - Concrete and cement
-  #     - Materials characterization
-  #         - Composition and structure
+      - Materials characterization
+          - Composition and structure
   #         - Magnetic properties
   #         - Mechanical properties
   #         - Thermal properties
   #     - Metals
   #     - Modeling and computational material science
-  #     - Polymers
+      - Polymers
   #     - Superconductors
   #
   # - Mathematics and Statistics
