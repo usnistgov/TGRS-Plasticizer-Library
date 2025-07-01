@@ -1,6 +1,6 @@
 # Time Gated Raman Plasticizer Library
 
-This library consists of time gated Raman spectra of 91 plasticizers included in the Scientific Polymer Products Inc. Plasticizer Kit$^‡$. The sample list can be found in the file: `SampleDetails.csv`. Plasticizers were measured at least in duplicate. Data was collected on a PicoRaman spectrometer (Timegate Instruments) using a 532 nm pulsed laser. The spectrometer was coupled through a fiber-optic probe (BAC102, B&W Tek). The wavenumber range of the measurements were calibrated using a polystyrene reference sample (PSRS) comparing the locations of 4 primary peaks at 620.9, 1001.4, 1031.8, 1602.3 $\textsf{cm}^{-1}$ (**McCreery 2000, Chap. 10**). Liquid samples were measured in aluminum sample pans, and solid samples were compacted using a pellet press. Sampling conditions were selected to minimize measured fluorescence and accompanying noise in the time-gated window. Parameters of laser power (mW) and collection time (s) were selected to achieve a Signal-to-Noise Ratio (SNR) exceeding 100. Collection times are reported in seconds and the Timegate software metric of sub acquisitions (SA), where samples were collected using 100 SA (13 s) or 300 SA (39 s). Some samples had significant fluorescence interference after time-gating and could not achieve an SNR >100. These samples are included in the library as is.
+This library consists of time gated Raman spectra of 91 plasticizers included in the Scientific Polymer Products Inc. Plasticizer Kit$^‡$. The sample list can be found in the file: `SampleDetails.csv`. Plasticizers were measured at least in duplicate. Data was collected on a PicoRaman spectrometer (Timegate Instruments) using a 532 nm pulsed laser. The spectrometer was coupled through a fiber-optic probe (BAC102, B&W Tek). The wavenumber range of the measurements were calibrated using a polystyrene reference sample (PSRS) comparing the locations of 4 primary peaks at 620.9, 1001.4, 1031.8, 1602.3 $\textsf{cm}^{-1}$ (**McCreery 2000, Chap. 10**). Liquid samples were measured in aluminum sample pans, and solid samples were compacted using a pellet press. Sampling conditions were selected to minimize measured fluorescence and accompanying noise in the time-gated window. Parameters of laser power (mW) and collection time (s) were selected to achieve a Signal-to-Noise Ratio (SNR) exceeding 100. Collection times are reported in seconds and the Timegate software metric of sub acquisitions (SA), where samples were collected using 100 SA (13 s) or 300 SA (39 s). Some samples had significant fluorescence interference after time-gating and could not achieve an SNR > 50. These samples are included in the library as is.
 Specific information regarding the sampling conditions for each plasticizer are included in the file: `SampleDetails.csv`. The raw and processed data are also available at: https://datapub.nist.gov/od/id/mds2-3837.
 
 ###### To cite this Data:
@@ -20,7 +20,7 @@ The calibration shift factor represents a weighted average of the deviation betw
 
 |                                          | Peak 1 | Peak 2 | Peak 3 | Peak 4 |
 | ---------------------------------------- | ------ | ------ | ------ | :----- |
-| Standardized location [$\text{cm}^{-1}$] | 620.9  | 1001.4 | 1031.8 | 1602.3 |
+| Standardized location ($\text{cm}^{-1}$) | 620.9  | 1001.4 | 1031.8 | 1602.3 |
 | Weight                                   | 16     | 100    | 27     | 28     |
 
 To calibrate the data, the calculated shift factor is scalar-added to the first column of the data, the wavenumber array, to systematically shift the position of the processed spectra.
@@ -35,13 +35,14 @@ $$
 \text{SNR}=\frac{Y_{avg}}{\left(\sigma_{noise}/\sqrt{2}\right)}
 $$
 
-Where $\text{Y}_{avg}$ is an average of the peak height above background of the highest-intensity Raman band across successive replicates. $\sigma_{noise}$ is the average of the standard deviation (STD) of the noise calculated under the footprint of the highest-intensity Raman band from each replicate.  $\sigma_{noise}$  was calculated from a 24 wavenumber range about the peak maximum. Before determination of the SNR, each spectra was normalized in intensity between 0 and 1, and a background subtraction was performed using an asymmetric least squares smoothing algorithm (Eilers & Boelens 2005). 
+Where Y<sub>avg</sub> is an average of the peak height above background of the highest-intensity Raman band across successive replicates. $\sigma_{noise}$ is the average of the standard deviation (STD) of the noise calculated under the footprint of the highest-intensity Raman band from each replicate.  $\sigma_{noise}$  was calculated from a 24 wavenumber range about the peak maximum. Before determination of the SNR, each spectra was normalized in intensity between 0 and 1, and a background subtraction was performed using an asymmetric least squares smoothing algorithm (Eilers & Boelens 2005). 
 
 ---
 
 ### Signal-to-Background Ratio (SBR):
 
 The SBR is an indication of peak strength relative to the noise about the spectral background. The calculated SBR is a less rigorous approximation of the SNR that can be calculated using a single spectra as opposed to the multiple replicates required for proper SNR calculations (**McCreery 2000, Chap. 4**).
+
 $$
 \text{SBR} = \frac{Y}{2\sigma_{background\:noise}}
 $$
@@ -68,7 +69,7 @@ McCreery, R.L., (2000). Calibration and Validation, in: McCreery, R.L., Raman Sp
 
 McCreery, R.L., (2000). Signal-To-Noise in Raman Spectroscopy, in: McCreery, R.L., Raman Spectroscopy for Chemical Analysis. John Wiley & Sons, Inc.
 
-##### NIST Disclaimer$^{‡}$: 
+##### NIST Disclaimer<sup>‡ </sup>:
 
 Certain commercial equipment, instruments, or materials are identified in this paper in order to adequately specify experimental procedure. Such identification does not imply recommendation or endorsement by the National Institute of Standards and Technology, nor does it imply that the materials or equipment identified are necessarily the best available for the purpose.
 
