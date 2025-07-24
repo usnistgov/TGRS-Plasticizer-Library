@@ -12,7 +12,7 @@ Rieland, Julie M, Kotula, Anthony P, Migler, Kalman B, Beers, Kathryn L (2025), 
 ### Data Calibration
 
 During the data collection period, the instrument required repairs resulting in a change in the wavenumber set point of the detector and requiring different shift factors to calibrate the data, as documented in `SampleDetails.csv`. The unprocessed files (`SampleName_Raw.csv`) have not been adjusted with the PSRS calibration. 
-The header lines of the unprocessed files include the peak locations of the PSRS that was measured during the same data collection session as the present sample and a calibration shift factor calculated using the method detailed below. The calibration shift is already incorporated in the processed data files (`SampleName_Proc.csv`), and further processing details can be found in the Jupyter Notebook accessible from the Github repository.
+The header lines of the unprocessed files include the peak locations of the PSRS that was measured during the same data collection session as the present sample and a calibration shift factor calculated using the method detailed below. The calibration shift is already incorporated in the processed data files (`[Sample Name]_Proc.csv`), and further processing details can be found in the Jupyter Notebook accessible from this Github repository.
 
 The calibration shift factor represents a weighted average of the deviation between the peak locations of the measured PSRS and standardized PS peak locations as reported in **McCreery 2000 Chap. 10**. Four peaks were assessed because the as-measured peaks presented some variation in their shifted position relative to the standardized peak locations. The average deviation of the peaks was calculated and weighted relative to the  corresponding peak intensities as reported in **McCreery 2000 Chap.10** (**Table 1**).
 
@@ -55,19 +55,21 @@ Where $\text{Y}$ is the height of the tallest Raman peak above the spectral back
 The file: `SampleDetails.csv` includes sample names, calibration parameters, laser power level, sub acquisition count, SNR, and SBR, as well as the International Union of Pure and Applied Chemistry (IUPAC) name, Chemical Abstracts Service (CAS) number, SMILES, and International Chemical Identifier (InChI) key for compounds where it was available. 
 
 Data:
-1. Unprocessed Time-Gate Raman Data (`SampleName_3D_Raw.csv`)
+The Full unporcessed and processed data can be accessed at https://datapub.nist.gov/od/id/mds2-3837 and be cited as: https://doi.org/10.18434/mds2-3837
+
+1. Unprocessed Time-Gate Raman Data (`[Sample Name]_3D_Raw.csv`)
 	These files have 15 header lines which includes details for calibration. Delineation is by semicolon (;). Line 16 is the time axis in unit nanoseconds. The first data column is the wavenumber axis in units $\textsf{cm}^{-1}$. The data consists of a (1429,100) matrix of intensity values.
 	
-2. Processed Time-Gate Raman Data (`SampleName_Proc.csv`)
+2. Processed Time-Gate Raman Data (`[Sample Name]_Proc.csv`)
 	These files have 4 header lines including sample name and gating information. Delineation is by semicolon (;). The data is presented in 2-column format where column 1 is the wavenumber axis with units $\textsf{cm}^{-1}$ and column 2 is calibrated, normalized intensity (A.U.). The data consists of a (1429,2) array.
 
 ### References:
 
-Eilers, P.H.C., Boelens, H.F.M., (2005). Baseline Correction with Asymmetric Least Squares Smoothing. Leiden University Medical Centre report, 1(1), 5.
+Eilers, P.H.C., Boelens, H.F.M., (2005). Baseline Correction with Asymmetric Least Squares Smoothing. Leiden University Medical Centre report, 1(1), 5. (accessible via Amazon Web Services as of July 24, 2025 at: https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/dd7c1919-302c-4ba0-8f88-8aa61e86bb9d)
 
-McCreery, R.L., (2000). Calibration and Validation, in: McCreery, R.L., Raman Spectroscopy for Chemical Analysis. John Wiley & Sons, Inc.
+McCreery, R.L., (2000). Calibration and Validation, in: McCreery, R.L., Raman Spectroscopy for Chemical Analysis. John Wiley & Sons, Inc. ISBN 0-471-25287-5
 
-McCreery, R.L., (2000). Signal-To-Noise in Raman Spectroscopy, in: McCreery, R.L., Raman Spectroscopy for Chemical Analysis. John Wiley & Sons, Inc.
+McCreery, R.L., (2000). Signal-To-Noise in Raman Spectroscopy, in: McCreery, R.L., Raman Spectroscopy for Chemical Analysis. John Wiley & Sons, Inc. ISBN 0-471-25287-5
 
 ##### NIST Disclaimer<sup>‡ </sup>:
 
