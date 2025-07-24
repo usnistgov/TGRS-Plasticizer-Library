@@ -61,7 +61,7 @@ The Full unporcessed and processed data can be accessed at https://datapub.nist.
 	These files have 15 header lines which includes details for calibration. Delineation is by semicolon (;). Line 16 is the time axis in unit nanoseconds. The first data column is the wavenumber axis in units $\textsf{cm}^{-1}$. The data consists of a (1429,100) matrix of intensity values.
 	
 2. Processed Time-Gate Raman Data (`[Sample Name]_Proc.csv`)
-	These files have 5 header lines including sample name and gating information. Delineation is by semicolon (;). The data is presented in 2-column format where column 1 is the WaveNumber axis with units $\textsf{cm}^{-1}$ and column 2 is calibrated, normalized intensity (A.U.). The data consists of a (1429,2) array.
+	These files have 6 header lines including sample name and gating information. Delineation is by semicolon (;). The data is presented in 2-column format where column 1 is the WaveNumber axis with units $\textsf{cm}^{-1}$ and column 2 is calibrated, normalized intensity (A.U.). The data consists of a (1429,2) array.
 
 ### References:
 
