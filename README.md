@@ -52,7 +52,7 @@ Where $\text{Y}$ is the height of the tallest Raman peak above the spectral back
 ----
 ### Library Contents
 
-The file: `SampleDetails.csv` includes sample names, calibration parameters, laser power level, sub acquisition count, SNR, and SBR, as well as the International Union of Pure and Applied Chemistry (IUPAC) name, Chemical Abstracts Service (CAS) number, SMILES, and International Chemical Identifier (InChI) key for compounds where it was available. 
+The file: `SampleDetails.csv` provides details about the samples included in the library and the data collection parameters including sample names, calibration parameters, laser power level, sub acquisition count, SNR, and SBR, as well as the International Union of Pure and Applied Chemistry (IUPAC) name, Chemical Abstracts Service (CAS) number, SMILES, and International Chemical Identifier (InChI) key for compounds where it was available. Delineation is by comma (,).
 
 Data:
 The Full unporcessed and processed data can be accessed at https://datapub.nist.gov/od/id/mds2-3837 and be cited as: https://doi.org/10.18434/mds2-3837
